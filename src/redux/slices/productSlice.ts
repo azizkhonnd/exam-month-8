@@ -39,7 +39,6 @@ const initialState: ProductState = {
     cartItems: [],
 };
 
-// Async thunks
 export const fetchProducts = createAsyncThunk<Product[]>('products/fetchProducts', async () => {
     const response = await axios.get('http://makeup-api.herokuapp.com/api/v1/products.json');
     return response.data.slice(0, 100).map((product: any) => ({
@@ -119,7 +118,6 @@ export const searchProducts = createAsyncThunk<Product[], string>(
     }
 );
 
-// Slice
 const productSlice = createSlice({
     name: 'products',
     initialState,

@@ -18,19 +18,19 @@ const Sidebar = () => {
         : [];
 
     const handleBrandChange = (brand: string) => {
-        setSelectedBrands(prevBrands =>
-            prevBrands.includes(brand)
+        setSelectedBrands(prevBrands => {
+            const updatedBrands = prevBrands.includes(brand)
                 ? prevBrands.filter(b => b !== brand)
-                : [...prevBrands, brand]
-        );
-    };
+                : [...prevBrands, brand];
 
-    const handleApplyFilter = () => {
-        if (selectedBrands.length > 0) {
-            dispatch(fetchProductsByBrand(selectedBrands.join(',')));
-        } else {
-            dispatch(fetchProducts());
-        }
+            if (updatedBrands.length > 0) {
+                dispatch(fetchProductsByBrand(updatedBrands.join(',')));
+            } else {
+                dispatch(fetchProducts());
+            }
+
+            return updatedBrands;
+        });
     };
 
     return (
@@ -54,12 +54,6 @@ const Sidebar = () => {
                     <p>Бренды не найдены</p>
                 )}
             </ul>
-
-            <div className="sidebar-actions">
-                <button onClick={handleApplyFilter} className="apply-filter-button">
-                    Применить
-                </button>
-            </div>
         </div>
     );
 };
