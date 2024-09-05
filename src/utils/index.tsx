@@ -2,7 +2,7 @@ import { Suspense, ReactNode } from "react";
 import "./Loader.scss";
 
 type SuspenseComponentProps = {
-  children: ReactNode;
+  children?: ReactNode; 
 };
 
 const Loading = () => {
@@ -16,7 +16,7 @@ const Loading = () => {
 const SuspenseComponent = ({ children }: SuspenseComponentProps) => {
   return (
     <Suspense fallback={<Loading />}>
-      {children}
+      {children || <Loading />} 
     </Suspense>
   );
 };

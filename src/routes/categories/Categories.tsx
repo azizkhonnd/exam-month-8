@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProductsByType } from "../../redux/slices/productSlice";
 import { RootState, AppDispatch } from "../../redux/store";
-import { Spin } from 'antd';
+import SuspenseComponent from "../../utils";
 import { convertPrice } from '../../utils/CurrencyUtil';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { addProductToLikes, removeProductFromLikes } from '../../redux/slices/likedProductsSlice';
@@ -74,7 +74,7 @@ const Categories = () => {
                 <div className="products__grid">
                     {loading ? (
                         <div className="loading__container">
-                            <Spin size="large" />
+                            <SuspenseComponent/>
                         </div>
                     ) : error ? (
                         <div>Error: {error}</div>

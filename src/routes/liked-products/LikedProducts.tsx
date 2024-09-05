@@ -1,10 +1,11 @@
-import { MdRemoveShoppingCart } from "react-icons/md"; 
+import { MdRemoveShoppingCart } from "react-icons/md";
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState, AppDispatch } from '../../redux/store';
 import { fetchProductById, Product } from '../../redux/slices/productSlice';
-import ProductCard from '../../components/card/Card'; 
-import { Spin, Alert } from 'antd';
+import ProductCard from '../../components/card/Card';
+import { Alert } from 'antd';
+import SuspenseComponent from "../../utils";
 import './Likedproducts.scss'
 
 const LikedProductsPage: React.FC = () => {
@@ -36,7 +37,7 @@ const LikedProductsPage: React.FC = () => {
         setLoadingProducts(false);
       }
     };
-    
+
     if (likedProductIds.length > 0) {
       fetchLikedProducts();
     } else {
@@ -47,7 +48,7 @@ const LikedProductsPage: React.FC = () => {
   if (loadingProducts) {
     return (
       <div className="loading-container">
-        <Spin size="large" />
+        <SuspenseComponent />
       </div>
     );
   }

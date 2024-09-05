@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProductById, clearProduct, fetchProductsByType } from '../../redux/slices/productSlice';
 import { RootState, AppDispatch } from '../../redux/store';
-import { Spin } from 'antd';
+import SuspenseComponent from '../../utils';
 import { convertPrice } from '../../utils/CurrencyUtil';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { addProductToLikes, removeProductFromLikes } from '../../redux/slices/likedProductsSlice';
@@ -36,7 +36,7 @@ const SingleProduct = () => {
     if (loading) {
         return (
             <div className="loading-container">
-                <Spin size="large" />
+                <SuspenseComponent />
             </div>
         );
     }
@@ -98,7 +98,7 @@ const SingleProduct = () => {
                         <h2>Recommended High Rating Products</h2>
                         {loadingByType['all'] ? (
                             <div className="loading-container">
-                                <Spin size="large" />
+                                <SuspenseComponent />
                             </div>
                         ) : (
                             <div className="recommended-products-grid">

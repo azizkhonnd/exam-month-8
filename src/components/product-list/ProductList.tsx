@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../redux/slices/productSlice';
 import { RootState, AppDispatch } from '../../redux/store';
 import ProductCard from '../card/Card';
-import { Spin } from 'antd';
+import SuspenseComponent from '../../utils/index';
 import './ProductList.scss';
 
 const ProductList: React.FC = () => {
@@ -16,8 +16,9 @@ const ProductList: React.FC = () => {
 
     if (loading) {
         return (
-            <div className="spinner-container">
-                <Spin size="large" />
+            <div className='loading-component'>
+                <SuspenseComponent>
+                </SuspenseComponent>
             </div>
         );
     }

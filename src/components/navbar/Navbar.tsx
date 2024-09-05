@@ -5,7 +5,8 @@ import { AiOutlineUser } from "react-icons/ai";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '../../redux/store';
-import { Badge, Select, Modal, Spin } from 'antd';
+import { Badge, Select, Modal } from 'antd';
+import SuspenseComponent from '../../utils';
 import './Navbar.scss';
 import SiteLogo from './assets/siteLogo.svg';
 import { setCurrency } from '../../redux/slices/currencySlice';
@@ -114,7 +115,7 @@ const Navbar: React.FC = () => {
                             />
                             <div className="line-navbar"></div>
                             <div className="search-results-container">
-                                {searchQuery.length >= 1 && loading && <Spin size="large" />}
+                                {searchQuery.length >= 1 && loading && <SuspenseComponent />}
                                 {searchQuery.length >= 1 && !loading ? (
                                     searchResults.length > 0 ? (
                                         <div className="search-results">
