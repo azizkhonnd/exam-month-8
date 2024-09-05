@@ -114,8 +114,8 @@ const Navbar: React.FC = () => {
                             />
                             <div className="line-navbar"></div>
                             <div className="search-results-container">
-                                {searchQuery.length >= 3 && loading && <Spin size="large" />}
-                                {searchQuery.length >= 3 && !loading ? (
+                                {searchQuery.length >= 1 && loading && <Spin size="large" />}
+                                {searchQuery.length >= 1 && !loading ? (
                                     searchResults.length > 0 ? (
                                         <div className="search-results">
                                             {productsToShow.map((product: Product) => (
