@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react';
 import { Modal } from 'antd';
 import 'antd/dist/reset.css';
@@ -78,7 +79,7 @@ const Main = () => {
     return (
         <div className="container rectangle__container__items">
             <div className="rectangle__container">
-                {imageList.map((img, index) => (
+                {imageList.map((_img, index) => (
                     <div className='rectangle__main' key={index}>
                         <div
                             className="rectangle__main__rectangle"
