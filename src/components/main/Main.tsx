@@ -1,5 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { useState, useEffect } from 'react';
+
+import { useState } from 'react';
 import { Modal } from 'antd';
 import 'antd/dist/reset.css';
 import MakeUpImg1 from './assets/make-up1.jpg';
@@ -23,22 +23,7 @@ const Main = () => {
     const [currentImage, setCurrentImage] = useState<string | null>(null);
     const [currentIndex, setCurrentIndex] = useState<number | null>(null);
 
-    useEffect(() => {
-        let timer: NodeJS.Timeout | undefined;
-
-        if (isModalOpen) {
-            timer = setInterval(() => {
-                handleNext();
-            }, 2000);
-        }
-
-        return () => {
-            if (timer) {
-                clearInterval(timer);
-            }
-        };
-    }, [isModalOpen, currentIndex]);
-
+  
     const handleRectangleClick = (index: number) => {
         setCurrentImage(imageList[index]);
         setCurrentIndex(index);
