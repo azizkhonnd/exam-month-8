@@ -134,7 +134,7 @@ const Navbar: React.FC = () => {
                                                     </div>
                                                 </div>
                                             ))}
-                                            
+
                                         </div>
                                     ) : (
                                         <p className="not-found">Product not found</p>
