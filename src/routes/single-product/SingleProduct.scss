@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'Fixel Text Semi';
+    src: url('../../fonts/FixelText-SemiBold.woff2') format('woff2'),
+        url('FixelText-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fixel Text';
+    src: url('../../fonts/FixelText-Regular.woff2') format('woff2'),
+        url('FixelText-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.product__info {
+    width: 300px;
+}
+
+
+.product-code {
+    font-family: 'Fixel Text';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+    color: #737272;
+    margin-bottom: 8px;
+}
+
+.product__description-container {
+    display: flex;
+    align-items: center;
+    margin-top: 64px;
+    height: 300px;
+    border: 1px solid #d3cece;
+    padding: 16px;
+    justify-content: center;
+}
+
+
+.single-product-page {
+    margin-top: 80px;
+}
+
+.product-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fixel Text';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #000000;
+}
+
+
+.product-image-small {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+}
+
+.product-details {
+    padding: 40px 100px;
+    background-color: #dbd9d9;
+    margin-right: 20px;
+}
+
+.product-type {
+    font-family: 'Fixel Text';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+    color: #737272;
+    margin-bottom: 8px;
+}
+
+.single-product {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-title {
+    font-family: 'Fixel Text Semi';
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+    color: #000000;
+    margin-bottom: 8px;
+    width: 65%;
+}
+
+.product-price {
+    font-family: 'Fixel Text';
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.add-to-cart-button {
+    width: 100%;
+    height: 44px;
+    background: #000000;
+    font-family: 'Fixel Text';
+    font-weight: 400;
+    font-size: 15px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
+.like-button-small {
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    top: -55px;
+    bottom: 50px;
+    right: 150px;
+}

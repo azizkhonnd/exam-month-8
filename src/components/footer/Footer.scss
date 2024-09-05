@@ -1,0 +1,214 @@
+@font-face {
+    font-family: 'Fixel Text';
+    src: url('../../fonts/FixelText-Medium.woff2') format('woff2'),
+        url('FixelText-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fixel Text Semi';
+    src: url('../../fonts/FixelText-SemiBold.woff2') format('woff2'),
+        url('FixelText-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.footer__wrapper {
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+.form__items {
+    bottom: 0;
+    background-color: #fafafa;
+    width: 100%;
+    height: 50vh;
+}
+
+
+.form__input__container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.form__label {
+    font-family: 'Fixel Text Semi';
+    font-weight: 600;
+    color: #212121;
+    font-size: 27px;
+}
+
+.form__input__group {
+    width: 100%;
+}
+
+.form__input {
+    font-family: 'Fixel Text';
+    font-weight: 400;
+    background: 0 0;
+    color: #212121;
+    font-size: 14px;
+    padding: 10px 110px 10px 0;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #212121;
+    outline: none;
+}
+
+.form__label {
+    display: flex;
+    justify-content: center;
+
+}
+
+.form__button {
+    text-transform: uppercase;
+    font-family: 'Fixel Text';
+    font-weight: 400;
+    background: 0 0;
+    border: none;
+    color: #212121;
+    font-size: 12px;
+    padding: 12.5px 88px 10px 0;
+    display: block;
+    width: 0;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #212121;
+    outline: none;
+    cursor: pointer;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    margin-top: 80px;
+}
+
+.footer__icons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footer__link {
+    border: 1px solid #b9b8b8;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #212121;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: white;
+    }
+}
+
+.form__container {
+    justify-content: center;
+    display: flex;
+}
+
+
+.footer__divider {
+    margin-top: 65px;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+
+.navbar__link {
+    line-height: 35px;
+    font-family: 'Fixel Text';
+    font-weight: 400;
+    font-size: 14px;
+    color: #212121;
+}
+
+.navbar__link-number {
+    line-height: 35px;
+    font-family: 'Fixel Text Semi';
+    font-weight: 600;
+    font-size: 20px;
+    color: #212121;
+}
+
+
+.copyright {
+    margin-top: 50px;
+}
+
+
+.flags {
+    font-family: 'Fixel Text';
+    font-weight: 400;
+    font-size: 13px;
+    color: #212121;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}
+
+.flag-icon {
+    width: 20px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.copyright-text {
+    text-transform: uppercase;
+    font-family: 'Fixel Text';
+    font-weight: 400;
+    font-size: 13px;
+    color: #212121;
+    text-align: center;
+}
+
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #212121;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    display: block;
+}
+.scroll-to-top.show {
+    display: none;
+}
+
+.scroll-to-top:hover {
+    background-color: #333;
+}
