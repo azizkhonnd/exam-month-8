@@ -5,7 +5,7 @@ import { RootState, AppDispatch } from '../../redux/store';
 import { fetchProductById, Product } from '../../redux/slices/productSlice';
 import ProductCard from '../../components/card/Card'; 
 import { Spin, Alert } from 'antd';
-import './LikedProducts.scss'
+import './Likedproducts.scss'
 
 const LikedProductsPage: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
